@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Application | Murang'a College of Technology</title>
+    <meta name="description" content="Apply online to Murang'a College of Technology for the next intake. Fill out our simple application form for your desired course.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/images/logo-placeholder.svg" alt="College Logo Placeholder" class="logo-placeholder">
+                <a href="index.html">M.C.T.</a>
+            </div>
+            <button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false">&#9776;</button>
+            <nav id="main-navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fees.html">Courses &amp; Fees</a></li>
+                    <li><a href="apply.html" aria-current="page">Apply</a></li>
+                    <li><a href="sponsorship.html">Sponsorships</a></li>
+                    <li><a href="#contact-footer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="application-info">
+            <div class="container">
+                <h1>📝 Online Application Form</h1>
+                <p class="lead">Start your journey with Murang'a College of Technology. Please fill out the form below completely.</p>
+                
+                <div class="card-grid" style="grid-template-columns: 1fr;">
+                    <div class="card bg-light">
+                        <h2>Important Information</h2>
+                        <ul>
+                            <li><strong>Application Deadline:</strong> Next intake closes on **March 30th** (Placeholder).</li>
+                            <li><strong>Next Steps:</strong> After submission, you will receive an email within 7 working days with a confirmation of receipt and details for your interview/assessment.</li>
+                            <li><strong>Required Documents:</strong> Please have your CV/Statement of Purpose and copies of your highest qualification ready to upload.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-section">
+            <div class="container">
+                <form id="application-form" class="form-section" method="POST" action="https://placeholder.formspree.io/f/xxxxxxxx" novalidate>
+                    <h2>Applicant Details</h2>
+
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="full-name" required aria-describedby="name-error">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="card-grid">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="date-of-birth" required aria-describedby="dob-error">
+                            <span class="error-message" id="dob-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number (e.g., 0722445566) *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="07XXXXXXXX" pattern="^(07|\+2547)\d{8}$" aria-describedby="phone-error">
+                            <span class="error-message" id="phone-error">Must be a valid Kenyan mobile number (e.g., 07XXXXXXXX).</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error">Please enter a valid email address.</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Full Residential Address *</label>
+                        <textarea id="address" name="address" rows="3" required aria-describedby="address-error"></textarea>
+                        <span class="error-message" id="address-error"></span>
+                    </div>
+
+                    <hr style="margin: 2rem 0; border-color: #E0E0E0;">
+
+                    <h2>Course &amp; Qualification</h2>
+                    
+                    <div class="form-group">
+                        <label for="course">Course Applying For *</label>
+                        <select id="course" name="course-applying-for" required aria-describedby="course-error">
+                            <option value="" disabled selected>-- Select a Course --</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Information Technology (IT)">Information Technology (IT)</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Business Management">Business Management</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Other">Other (Specify in Message)</option>
+                        </select>
+                        <span class="error-message" id="course-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualification">Highest Qualification *</label>
+                        <select id="qualification" name="highest-qualification" required aria-describedby="qual-error">
+                            <option value="" disabled selected>-- Select Qualification --</option>
+                            <option value="KCSE/O-Level">KCSE/O-Level</option>
+                            <option value="A-Level">A-Level</option>
+                            <option value="Certificate">Certificate</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Degree">Degree</option>
+                            <option value="Postgraduate">Postgraduate</option>
+                        </select>
+                        <span class="error-message" id="qual-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cv-upload">Upload CV / Statement of Purpose *</label>
+                        <input type="file" id="cv-upload" name="cv-upload" accept=".pdf,.doc,.docx" required aria-describedby="file-error">
+                        <span class="error-message" id="file-error"></span>
+                        <small style="display: block; margin-top: 0.5rem;">Accepted file types: PDF, DOCX. Max size 5MB (Client-side demo).</small>
+                    </div>
+                    
+                    <hr style="margin: 2rem 0; border-color: #E0E0E0;">
+                    
+                    <h2>Emergency Contact</h2>
+                    
+                    <div class="card-grid">
+                        <div class="form-group">
+                            <label for="emergency-name">Emergency Contact Full Name *</label>
+                            <input type="text" id="emergency-name" name="emergency-contact-name" required aria-describedby="ec-name-error">
+                            <span class="error-message" id="ec-name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergency-phone">Emergency Contact Phone *</label>
+                            <input type="tel" id="emergency-phone" name="emergency-contact-phone" required placeholder="07XXXXXXXX" pattern="^(07|\+2547)\d{8}$" aria-describedby="ec-phone-error">
+                            <span class="error-message" id="ec-phone-error">Must be a valid Kenyan mobile number.</span>
+                        </div>
+                    </div>
+
+                    <p class="form-group" style="font-size: 0.9rem; margin-top: 2rem;">By submitting this form, you certify that the information provided is true and accurate.</p>
+
+                    <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
+                    <noscript>
+                        <p style="color: #D2042D; margin-top: 1rem;">**Note:** Your application will be submitted directly to our placeholder endpoint. Client-side validation is disabled.</p>
+                    </noscript>
+                </form>
+            </div>
+        </section>
+        
+        <div id="confirmation-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close-btn" role="button" aria-label="Close dialog">&times;</span>
+                <h3 id="modal-title">✅ Application Successful!</h3>
+                <p id="modal-text">Thank you for applying to Murang'a College of Technology. Your application has been received and is under review.</p>
+                
+                <p style="margin-top: 1rem; font-weight: bold;">What happens next:</p>
+                <ul style="list-style: none; padding-left: 0; text-align: left; margin-top: 0.5rem; font-size: 0.95rem;">
+                    <li>- Look for a confirmation email in your inbox (check spam).</li>
+                    <li>- We will contact you within **7 business days** for next steps (interview/assessment).</li>
+                </ul>
+
+                <div class="modal-actions">
+                    <a id="modal-mailto-btn" href="mailto:college@gmail.com?subject=Application%20Copy" class="btn btn-secondary">Send Copy to Email</a>
+                    <button class="btn btn-primary close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contact-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Murang'a College of Technology</h4>
+                    <p>Committed to excellence in technology and business education. Shaping Kenya's future innovators.</p>
+                    <p class="footer-bottom" style="border: none; padding-top: 0.5rem; text-align: left;">
+                        &copy; <span id="current-year">2023</span> M.C.T. All rights reserved.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fees.html">Courses &amp; Fees</a></li>
+                        <li><a href="apply.html">Online Application</a></li>
+                        <li><a href="sponsorship.html">Sponsorships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><strong>Phone:</strong> <a href="tel:+254722445566">0722445566</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:college@gmail.com">college@gmail.com</a></p>
+                    <p><strong>Location:</strong> Murang’a County, Kenya</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook Placeholder">📘</a>
+                        <a href="#" aria-label="Twitter Placeholder">🐦</a>
+                        <a href="#" aria-label="LinkedIn Placeholder">🔗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
