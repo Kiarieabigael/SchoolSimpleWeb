@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses and Fees Structure | Murang'a College of Technology</title>
+    <meta name="description" content="View the full fee structure in Kenyan Shillings (KSh) and use the interactive fee calculator for all courses offered at Murang'a College of Technology.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/images/logo-placeholder.svg" alt="College Logo Placeholder" class="logo-placeholder">
+                <a href="index.html">M.C.T.</a>
+            </div>
+            <button class="nav-toggle" aria-controls="main-navigation" aria-expanded="false">&#9776;</button>
+            <nav id="main-navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="fees.html" aria-current="page">Courses &amp; Fees</a></li>
+                    <li><a href="apply.html">Apply</a></li>
+                    <li><a href="sponsorship.html">Sponsorships</a></li>
+                    <li><a href="#contact-footer">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="fee-calculator">
+            <div class="container">
+                <h1>💰 Interactive Fee Calculator (KSh)</h1>
+                <p>Use the tool below to get a quick, estimated total cost for your chosen course and duration.</p>
+                
+                <div class="calculator-section">
+                    <form id="fee-calculator-form">
+                        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                            <div class="form-group">
+                                <label for="calc-course">Select Course:</label>
+                                <select id="calc-course" name="course" required>
+                                    <option value="" disabled selected>-- Choose Course --</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-duration">Select Duration:</label>
+                                <select id="calc-duration" name="duration" required>
+                                    <option value="" disabled selected>-- Select Duration --</option>
+                                    <option value="Term">1 Term</option>
+                                    <option value="Year">1 Academic Year (Estimate)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div id="calc-output" class="calculator-output" aria-live="polite">
+                        </div>
+                </div>
+
+                <a href="sample-brochure.pdf" class="btn btn-primary" download>⬇️ Download Full Brochure (PDF)</a>
+                <button onclick="window.print()" class="btn btn-secondary" style="margin-left: 1rem;">🖨️ Print Fees Table</button>
+            </div>
+        </section>
+
+        <section id="full-fees" class="bg-light">
+            <div class="container">
+                <h2>Full Fee Structure per Term (Kenyan Shillings - KSh)</h2>
+                <p>All fees are payable in KSh per term unless otherwise specified. Fees are subject to change annually. **[NOTE: All values are Sample Data. Refer to README.]**</p>
+
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Tuition Fee</th>
+                            <th>Registration Fee</th>
+                            <th>Library Fee</th>
+                            <th>Exam Fee</th>
+                            <th>Total (Estimate)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="se-fees">
+                            <td>Software Engineering</td>
+                            <td>KSh 80,000</td>
+                            <td>KSh 5,000</td>
+                            <td>KSh 3,000</td>
+                            <td>KSh 4,000</td>
+                            <td class="total-row">KSh 92,000</td>
+                        </tr>
+                        <tr id="it-fees">
+                            <td>Information Technology (IT)</td>
+                            <td>KSh 75,000</td>
+                            <td>KSh 5,000</td>
+                            <td>KSh 3,000</td>
+                            <td>KSh 4,000</td>
+                            <td class="total-row">KSh 87,000</td>
+                        </tr>
+                        <tr id="cs-fees">
+                            <td>Computer Science</td>
+                            <td>KSh 85,000</td>
+                            <td>KSh 5,000</td>
+                            <td>KSh 3,000</td>
+                            <td>KSh 4,000</td>
+                            <td class="total-row">KSh 97,000</td>
+                        </tr>
+                        <tr id="acc-fees">
+                            <td>Accounting</td>
+                            <td>KSh 65,000</td>
+                            <td>KSh 4,000</td>
+                            <td>KSh 2,500</td>
+                            <td>KSh 3,500</td>
+                            <td class="total-row">KSh 75,000</td>
+                        </tr>
+                        <tr id="bm-fees">
+                            <td>Business Management</td>
+                            <td>KSh 60,000</td>
+                            <td>KSh 4,000</td>
+                            <td>KSh 2,500</td>
+                            <td>KSh 3,500</td>
+                            <td class="total-row">KSh 70,000</td>
+                        </tr>
+                        <tr id="ds-fees">
+                            <td>Data Science</td>
+                            <td>KSh 90,000</td>
+                            <td>KSh 5,000</td>
+                            <td>KSh 3,500</td>
+                            <td>KSh 4,500</td>
+                            <td class="total-row">KSh 103,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5"><strong>Note:</strong> Totals are per term. Other charges (accommodation, fieldwork, medical) are excluded.</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Murang'a College of Technology</h4>
+                    <p>Committed to excellence in technology and business education. Shaping Kenya's future innovators.</p>
+                    <p class="footer-bottom" style="border: none; padding-top: 0.5rem; text-align: left;">
+                        &copy; <span id="current-year">2023</span> M.C.T. All rights reserved.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="fees.html">Courses &amp; Fees</a></li>
+                        <li><a href="apply.html">Online Application</a></li>
+                        <li><a href="sponsorship.html">Sponsorships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><strong>Phone:</strong> <a href="tel:+254722445566">0722445566</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:college@gmail.com">college@gmail.com</a></p>
+                    <p><strong>Location:</strong> Murang’a County, Kenya</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook Placeholder">📘</a>
+                        <a href="#" aria-label="Twitter Placeholder">🐦</a>
+                        <a href="#" aria-label="LinkedIn Placeholder">🔗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
